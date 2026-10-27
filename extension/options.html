@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>yoink – options</title>
+<style>
+  :root { color-scheme: light dark; --akzent: #ff5a1f; --rand: #8884; }
+  body { font: 15px/1.5 system-ui, -apple-system, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  p.leise { opacity: 0.75; margin-top: 0; }
+  label { display: block; font-weight: 600; margin: 28px 0 6px; }
+  .zeile { display: flex; gap: 8px; }
+  input { flex: 1; font: 14px ui-monospace, Menlo, monospace; padding: 8px 10px; border: 1px solid var(--rand); border-radius: 6px; background: transparent; color: inherit; }
+  button { font: inherit; padding: 8px 14px; border-radius: 6px; border: 1px solid var(--rand); background: transparent; color: inherit; cursor: pointer; }
+  button.haupt { background: var(--akzent); border-color: var(--akzent); color: #fff; }
+  #status { min-height: 1.5em; margin-top: 12px; }
+  #status.ok { color: #1a7f37; }
+  #status.fehler { color: #cf222e; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>yoink</h1>
+<p class="leise">Saves elements from web pages as code inspiration.</p>
+
+<label for="ordner">Save folder</label>
+<div class="zeile">
+  <input id="ordner" type="text" placeholder="/Users/you/Documents/yoink" spellcheck="false" autocomplete="off">
+  <button id="waehlen" type="button">Choose…</button>
+  <button id="speichern" type="button" class="haupt">Save</button>
+</div>
+<div id="status" role="status"></div>
+
+<p>Each catch becomes a folder of its own inside this folder, with a <code>README.md</code> and the files next to it.
+The folder works as an Obsidian vault or inside one, but any folder will do. You can change it at any time;
+earlier catches stay where they are.</p>
+
+<p>How to use: press <b>⌥⇧Y</b> (Option-Shift-Y) or click the yoink icon, point at an element and click.
+Drag to catch an area. <b>↑</b>/<b>↓</b> move one level up or down, <b>E</b> turns extras on, <b>Esc</b> quits.</p>
+
+<script src="options.js"></script>
+</body>
+</html>

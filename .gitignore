@@ -1,0 +1,6 @@
+node_modules/
+dist/
+__pycache__/
+*.zip
+.DS_Store
+tests/intern-woerter.txt
